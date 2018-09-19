@@ -1,0 +1,11 @@
+@function pxToRem($num) {
+  @return $num/75+rem;
+}
+
+$ddd:100px;
+@mixin setp($p, $w) {
+  #{$p}: pxToRem($w)
+}
+.bb{
+  font-size: 100px
+}
