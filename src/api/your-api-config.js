@@ -3,8 +3,12 @@ const {
 } = require('./cross-domain-config');
 
 // 当前代码对应环境
-var currentEnv = process.env.currentEnv
-var isBuiltMode = process.env.NODE_ENV == 'production'
+const currentEnv = process.env.currentEnv
+const isBuiltMode = process.env.NODE_ENV == 'production'
+const baseDomain = process.env.domain || ''
+
+
+
 
 
 // API接口地址配置模块,支持反向代理
@@ -12,7 +16,7 @@ var isBuiltMode = process.env.NODE_ENV == 'production'
 
 module.exports = {
   get1: `${isBuiltMode?get1[currentEnv]:''}/t/t`,
-  get2: `/2`,
+  get2: `${baseDomain}/2`,
   get3: `/3`,
   get4: `/4`,
   get5: `/5`,
