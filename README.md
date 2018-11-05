@@ -31,6 +31,9 @@ npm run build --report
 >src/api/cross-domain-config.js  跨域请求时需要在此进行配置(需要与接口地址的属性保持一致)  
 >src/api/your-api-config.js      配置接口地址
 
+# 多页面配置(解决history刷新问题)
+>src/api/page-router-config.js      多页面构建html文件路径配置
+
 # 项目结构(项目采用history模式)
 >src/view-----------------------------页面  
 >src/mock---------------------------本地mock数据，json文件路径与接口保持一致  
